@@ -1,6 +1,6 @@
 import React from 'react';
-import ToolBox from './ToolBox';
-import Product from './Product';
+import ToolBox from 'components/ToolBox';
+import Product from 'components/Product';
 
 class Products extends React.Component{
     render(){
