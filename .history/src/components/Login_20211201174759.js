@@ -12,7 +12,7 @@ class Login extends React.Component {
         event.preventDefault();
 
         //获取表单数据
-        console.log(this.state);
+        console.log(this.statetate);
         
         //this.props.history.push('/');
     };

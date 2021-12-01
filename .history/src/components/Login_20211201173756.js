@@ -12,14 +12,14 @@ class Login extends React.Component {
         event.preventDefault();
 
         //获取表单数据
-        console.log(this.state);
+        console.log(this.statetate);
         
         //this.props.history.push('/');
     };
 
     handleChange = e => {
         this.setState({
-            [e.target.name]:e.target.value,
+            [e.target.name]:e.target.value; 
         });
     };
 
@@ -37,7 +37,7 @@ class Login extends React.Component {
                 <div className="field">
                     <label className="label">Password</label>
                     <div className="control">
-                        <input className="input" type="password" placeholder="Password" name="password" value={this.state.email} onChange={this.handleChange}/>
+                        <input className="password" type="text" placeholder="Password" name="password" value={this.state.email} onChange={this.handleChange}/>
                     </div>
                 </div>
                 <div className="control">

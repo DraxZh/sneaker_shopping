@@ -5,4 +5,4 @@ import App from 'components/App';
 import 'css/app.scss';
 import 'css/style.scss';
 
-ReactDom.render(<Router />, document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'));
