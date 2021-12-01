@@ -13,7 +13,6 @@ class Products extends React.Component{
                         <div className="column is-3"><Product /></div>
                         <div className="column is-3"><Product /></div>
                         <div className="column is-3"><Product /></div>
-                        <div className="column is-3"><Product /></div>
                     </div>
                     
                 </div>

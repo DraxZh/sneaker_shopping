@@ -16,8 +16,7 @@ class ToolBox extends React.Component{
                     </div>
                 </div>
                 <div className="cart-box">
-                    <i className="far fa-shopping-cart"></i>
-                    <span className="cart-num">(0)</span>
+                    <i className="fas fa-shopping-cart"></i>
                 </div>
             </div>
         );
