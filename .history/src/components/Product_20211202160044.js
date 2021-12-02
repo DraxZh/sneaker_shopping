@@ -6,6 +6,11 @@ class Product extends React.Component{
     
     render(){
         const {name, image, tags, price,status} = this.props.product;
+        const pClass = {
+            available: 'product',
+            unavailable: 'product out-stock'
+        };
+        
         return(
             <div className={status ==='available'?'product':'product out-stock'}>
                 <div className="p-content">

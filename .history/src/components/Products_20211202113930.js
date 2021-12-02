@@ -15,7 +15,7 @@ class Products extends React.Component{
         {
             id:2,
             name: 'Nike Paul George PG 3',
-            image: 'images/2.jpg',
+            image: 'images/1.jpg',
             tags: '25 Colors',
             price: 18000,
             status: 'available'
@@ -28,14 +28,6 @@ class Products extends React.Component{
             price: 13500,
             status: 'available'
         },
-        {
-            id: 4,
-            name: "Nike Air Foamposite",
-            image: "/images/4.jpg",
-            tags: '16 Color, y',
-            price: 14000,
-            status: 'unavailable'
-        },
 
     ]
     render(){
@@ -47,7 +39,7 @@ class Products extends React.Component{
                         {
                             this.products.map(p=>{
                                 return(
-                                    <div className="column is-3" key={p.id}>
+                                    <div className="column is-3">
                                         <Product product={p}/>
                                     </div>
                                 );

@@ -34,7 +34,7 @@ class Products extends React.Component{
             image: "/images/4.jpg",
             tags: '16 Color, y',
             price: 14000,
-            status: 'unavailable'
+            status: 'available'
         },
 
     ]

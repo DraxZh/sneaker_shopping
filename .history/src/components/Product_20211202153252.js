@@ -5,9 +5,13 @@ import {formatPrice} from 'commons/FormatPrice';
 class Product extends React.Component{
     
     render(){
-        const {name, image, tags, price,status} = this.props.product;
+        const {name, image, tags, price} = this.props.product;
+        const _pClass = {
+            available: 'product',
+            unavailable: 'product out-stock'
+        }
         return(
-            <div className={status ==='available'?'product':'product out-stock'}>
+            <div className={_pClass[status]}>
                 <div className="p-content">
                     <div className="img-wrapper">
                         <div className="out-stock-text">Out of Stock</div>
@@ -20,17 +24,16 @@ class Product extends React.Component{
                     
                 </div>
                 <div className="p-footer">
-                    <p className="price">
-                        {formatPrice(price)}
-                    </p>
-                    <button className="add-cart" disabled={status==='unavailable'}>
+                    <p className="price">{formatPrice(price)}</p>
+                    <button className="add-cart" disabled={status === 'available'}>
                         <i className="fas fa-shopping-cart"></i>
                         <i className="fas fa-exclamation"></i>
                     </button>
+                    
                 </div>
             </div>
-        );
-    }
+        )
+    };
 }
 
 export default Product;

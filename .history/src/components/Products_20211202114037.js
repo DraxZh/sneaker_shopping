@@ -34,7 +34,7 @@ class Products extends React.Component{
             image: "/images/4.jpg",
             tags: '16 Color, y',
             price: 14000,
-            status: 'unavailable'
+            status: 'available'
         },
 
     ]
@@ -47,7 +47,7 @@ class Products extends React.Component{
                         {
                             this.products.map(p=>{
                                 return(
-                                    <div className="column is-3" key={p.id}>
+                                    <div className="column is-3">
                                         <Product product={p}/>
                                     </div>
                                 );
