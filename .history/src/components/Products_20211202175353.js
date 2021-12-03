@@ -12,7 +12,7 @@ class Products extends React.Component{
             console.log(data);
             this.setState({
                 products: data
-            })
+            }
         }); 
     }
     render(){

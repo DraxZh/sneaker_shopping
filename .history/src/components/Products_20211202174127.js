@@ -3,17 +3,48 @@ import ToolBox from './ToolBox';
 import Product from './Product';
 
 class Products extends React.Component{
-    state = {
-        products:[]
-    };
+    products = [
+        {
+            id:1,
+            name: 'Air Jordan 4',
+            image: 'images/1.jpg',
+            tags: '45 Colors',
+            price: 15000,
+            status: 'available'
+        },
+        {
+            id:2,
+            name: 'Nike Paul George PG 3',
+            image: 'images/2.jpg',
+            tags: '25 Colors',
+            price: 18000,
+            status: 'available'
+        },
+        {
+            id: 3,
+            name: "Jordan Why Not Zero 2.0",
+            image: "/images/3.jpg",
+            tags: '16 Color, y',
+            price: 13500,
+            status: 'available'
+        },
+        {
+            id: 4,
+            name: "Nike Air Foamposite",
+            image: "/images/4.jpg",
+            tags: '16 Color, y',
+            price: 14000,
+            status: 'unavailable'
+        },
+
+    ];
+
     componentDidMount(){
         fetch('http://localhost:3003/products').then(response => response.json())
         .then(data=>{
             console.log(data);
-            this.setState({
-                products: data
-            })
-        }); 
+            this.products = data;
+        });
     }
     render(){
         return(
@@ -22,7 +53,7 @@ class Products extends React.Component{
                 <div className="products">
                     <div className="columns is-multiline is-dektop">
                         {
-                            this.state.products.map(p=>{
+                            this.products.map(p=>{
                                 return(
                                     <div className="column is-3" key={p.id}>
                                         <Product product={p}/>

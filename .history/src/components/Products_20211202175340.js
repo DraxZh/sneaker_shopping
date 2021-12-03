@@ -10,9 +10,9 @@ class Products extends React.Component{
         fetch('http://localhost:3003/products').then(response => response.json())
         .then(data=>{
             console.log(data);
-            this.setState({
+            this.setState（{
                 products: data
-            })
+            }
         }); 
     }
     render(){
