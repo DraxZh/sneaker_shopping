@@ -6,7 +6,6 @@ import Product from './Product';
 class Products extends React.Component{
     state = {
         products:[],
-        //搜素后products的值会被更改
         sourceProducts:[]
     };
     componentDidMount(){
@@ -33,6 +32,7 @@ class Products extends React.Component{
         })
     }
     
+    this.setState
     render(){
         return(
             <div>

@@ -6,7 +6,6 @@ import Product from './Product';
 class Products extends React.Component{
     state = {
         products:[],
-        //搜素后products的值会被更改
         sourceProducts:[]
     };
     componentDidMount(){
@@ -20,7 +19,7 @@ class Products extends React.Component{
     //search the products
     search = text =>{
         console.log(text)
-        let _products = [...this.state.sourceProducts]
+        let _products = [...this.state.products]
         //Filter New Array
         _products = _products.filter(p=>{
             //拿到name调用match方法
@@ -29,10 +28,11 @@ class Products extends React.Component{
         })
         //set state
         this.setState({
-            products: _products
+            prodducts: _products
         })
     }
     
+    this.setState
     render(){
         return(
             <div>

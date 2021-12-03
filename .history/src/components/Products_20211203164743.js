@@ -33,6 +33,7 @@ class Products extends React.Component{
         })
     }
     
+    this.setState
     render(){
         return(
             <div>

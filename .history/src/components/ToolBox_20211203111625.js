@@ -5,22 +5,18 @@ class ToolBox extends React.Component{
     state = {
         searchText:""
     }
-    //change the search bar into inputed value
-    handleChange = event =>{
-        const value = event.target.value;
+
+    handleChange = e=>{
+        const value = e.target.value;
         this.setState({
             searchText: value
         })
-        this.props.search(value);
     };
-
-    //clear search
-    clearSearch = () =>{
+    clearSearchText = () =>{
         this.setState({
             searchText:''
         });
-        this.props.search('')
-    }; 
+    };
 
     render(){
         return (
@@ -37,7 +33,7 @@ class ToolBox extends React.Component{
                             onChange={this.handleChange}/>
                         </div>
                         <div className="control">
-                            <button className="button" onClick ={this.clearSearch}>X</button>
+                            <button className="button" onCli={this.clearSearchText}>X</button>
                         </div>
                     </div>
                 </div>

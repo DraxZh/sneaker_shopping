@@ -5,6 +5,7 @@ class ToolBox extends React.Component{
     state = {
         searchText:""
     }
+
     //change the search bar into inputed value
     handleChange = event =>{
         const value = event.target.value;
@@ -14,7 +15,7 @@ class ToolBox extends React.Component{
         this.props.search(value);
     };
 
-    //clear search
+    //cleasearch
     clearSearch = () =>{
         this.setState({
             searchText:''

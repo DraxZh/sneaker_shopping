@@ -5,38 +5,26 @@ import Product from './Product';
 
 class Products extends React.Component{
     state = {
-        products:[],
-        //搜素后products的值会被更改
-        sourceProducts:[]
+        products:[]
     };
     componentDidMount(){
+        fetch('http://localhost:3003/products').then(response => response.json())
+        .then(data=>{
+            console.log(data);
+            this.setState({
+                products: data
+            })
+        });
         axios.get('http://localhost:3003/products').then(response=>{
             this.setState({
-                products:response.data,
-                sourceProducts: response.data
+                products:response.data
             });
         });
     }
-    //search the products
-    search = text =>{
-        console.log(text)
-        let _products = [...this.state.sourceProducts]
-        //Filter New Array
-        _products = _products.filter(p=>{
-            //拿到name调用match方法
-            const matchArray =  p.name.match(new RegExp(text, 'gi'));
-            return !!matchArray;
-        })
-        //set state
-        this.setState({
-            products: _products
-        })
-    }
-    
     render(){
         return(
             <div>
-                <ToolBox search={this.search}/>
+                <ToolBox/>
                 <div className="products">
                     <div className="columns is-multiline is-dektop">
                         {

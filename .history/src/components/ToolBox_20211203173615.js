@@ -14,7 +14,7 @@ class ToolBox extends React.Component{
         this.props.search(value);
     };
 
-    //clear search
+    //cleasearch
     clearSearch = () =>{
         this.setState({
             searchText:''
