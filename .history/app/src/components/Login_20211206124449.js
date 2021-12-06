@@ -17,9 +17,9 @@ class Login extends React.Component {
         //this.props.history.push('/');
     };
 
-    handleChange = event => {
+    handleChange = e => {
         this.setState({
-            [event.target.name]:event.target.value,
+            [e.target.name]:e.target.value,
         });
     };
 
