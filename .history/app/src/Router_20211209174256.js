@@ -4,10 +4,12 @@ import App from 'components/App';
 import Login from 'components/Login';
 import NotFound from 'components/NotFound';
 import { Fragment } from 'react';
+import Panel from 'components/Panel'
 
 const Router = () =>(
     <Fragment>
-    <BrowserRouter>
+        <Panel/> 
+        <BrowserRouter>
         <Routes>
             <Route path="/" exact element={<App/>}/>
             <Route path="/login" element = {<Login/>}/>

@@ -60,7 +60,7 @@ class Products extends React.Component{
                         }
                         </TransitionGroup>
                     </div>
-                    <button className="button is-primary add-btn" onClick={this.toAdd}>add</button>
+                    <button className="button is-primary add-btn" onClick={this.add()}>add</button>
                 </div>
             </div>
         )

@@ -5,31 +5,31 @@ class Panel extends React.Component{
     state={
         active:false
     };
-    open=()=>{
-        this.setState({
-            active: true
-        })
-    };
-    close=()=>{
-        this.setState({
-            active: false
-        })
-    };
+    // open=()=>{
+    //     this.setState({
+    //         active: true
+    //     })
+    // };
+    // close=()=>{
+    //     this.setState({
+    //         active: false
+    //     })
+    // };
     
     render(){
         const panelState = {
             true:'panel-wrapper active',
-            false:'panel-wrapper',
+            false:'panel-wrapper'
         };
         
         return(
     
-            <div className={panelState[this.state.activ]}>
-                <div className="over-layer" onClick={this.close}></div>
+            <div className={'panel-wrapper'}>
+                <div className="over-layer" ></div>
                     {/*这是一个遮罩层 */}
                 <div className="panel" >
                     <div className="head">
-                        <span className="close" onClick={this.close}>x</span>
+                        <span className="close" >x</span>
                         <p className="has-text-centered">Children component</p>
                     </div>
                 </div>

@@ -12,6 +12,8 @@ class Products extends React.Component{
         sourceProducts:[]
     };
 
+    
+
     componentDidMount(){
         axios.get('http://localhost:3001/products').then(response=>{
             this.setState({
@@ -36,10 +38,6 @@ class Products extends React.Component{
         })
     }
     
-    toAdd=()=>{
-        Panel.open();
-    }
-
     render(){
         return(
             <div>
@@ -60,7 +58,7 @@ class Products extends React.Component{
                         }
                         </TransitionGroup>
                     </div>
-                    <button className="button is-primary add-btn" onClick={this.toAdd}>add</button>
+                    <button className="button is-primary add-btn" onClick={Panel.open()}>add</button>
                 </div>
             </div>
         )

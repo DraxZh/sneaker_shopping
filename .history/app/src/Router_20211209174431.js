@@ -7,7 +7,7 @@ import { Fragment } from 'react';
 
 const Router = () =>(
     <Fragment>
-    <BrowserRouter>
+        <BrowserRouter>
         <Routes>
             <Route path="/" exact element={<App/>}/>
             <Route path="/login" element = {<Login/>}/>

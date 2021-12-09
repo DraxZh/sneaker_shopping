@@ -36,8 +36,8 @@ class Products extends React.Component{
         })
     }
     
-    toAdd=()=>{
-        Panel.open();
+    add = () =>{
+        Panel.open()
     }
 
     render(){
@@ -60,7 +60,7 @@ class Products extends React.Component{
                         }
                         </TransitionGroup>
                     </div>
-                    <button className="button is-primary add-btn" onClick={this.toAdd}>add</button>
+                    <button className="button is-primary add-btn" onClick={add}>add</button>
                 </div>
             </div>
         )

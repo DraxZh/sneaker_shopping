@@ -19,7 +19,7 @@ class Panel extends React.Component{
     render(){
         const panelState = {
             true:'panel-wrapper active',
-            false:'panel-wrapper',
+            false:'panel-wrapper'
         };
         
         return(

@@ -3,28 +3,26 @@ import {render} from 'react-dom';
 
 class Panel extends React.Component{
     state={
-        active:false
+        active: false
     };
-    open=()=>{
+    close=()=>{
         this.setState({
             active: true
         })
     };
-    close=()=>{
+
+    open = () =>{
         this.setState({
-            active: false
+            active: true
         })
     };
-    
-    render(){
-        const panelState = {
+    panelState = {
             true:'panel-wrapper active',
-            false:'panel-wrapper',
-        };
-        
+            false:'panel-wrapper'
+    };
+    render(){
         return(
-    
-            <div className={panelState[this.state.activ]}>
+            <div className={'panel-wrapper'}>
                 <div className="over-layer" onClick={this.close}></div>
                     {/*这是一个遮罩层 */}
                 <div className="panel" >
