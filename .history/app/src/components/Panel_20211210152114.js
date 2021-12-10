@@ -3,24 +3,21 @@ import {render} from 'react-dom';
 
 class Panel extends React.Component{
     state={
-        active: false,
-        component: null,
-        callback: ()=>{}
+        active:false,
+        component:null
     };
-    open = (options)=>{
-        const { component, callback } = options;
-        const _component = React.createElement(component, {close: this.close});
+    open=(options)=>{
+        const {component} = options;
+        const _component = React.createElement(component)
         this.setState({
             active: true,
-            component: _component,
-            callback: callback
+            component:_component
         })
     };
-    close=data=>{
+    close=()=>{
         this.setState({
             active: false
-        });
-        this.state.callback(data);
+        })
     };
     
     render(){
@@ -30,6 +27,7 @@ class Panel extends React.Component{
         };
         
         return(
+    
             <div className={panelClass[this.state.active]}>
                 <div className="over-layer" onClick={this.close}></div>
                     {/*这是一个遮罩层 */}

@@ -142,9 +142,10 @@ body {
   margin: auto;
   padding: 1.4rem 0;
   .add-btn {
-    display: block;
-    margin: 0 auto;
-    z-index: 99;
+    //position: fixed;
+    //right: 10px;
+    top: 10rem;
+    z-index: 80;
   }
 }
 

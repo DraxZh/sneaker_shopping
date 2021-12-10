@@ -41,7 +41,7 @@ class Products extends React.Component{
         Panel.open({
             component: AddInventory,
             callback: data =>{
-                console.log('Products Data:', data); 
+                console.log('Products Data:',data);
             }
         });
     }

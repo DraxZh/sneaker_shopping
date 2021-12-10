@@ -9,7 +9,7 @@ class Panel extends React.Component{
     };
     open = (options)=>{
         const { component, callback } = options;
-        const _component = React.createElement(component, {close: this.close});
+        const _component = React.createElement(component,{close: this.close})
         this.setState({
             active: true,
             component: _component,

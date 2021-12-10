@@ -3,24 +3,21 @@ import {render} from 'react-dom';
 
 class Panel extends React.Component{
     state={
-        active: false,
-        component: null,
-        callback: ()=>{}
+        active:false,
+        component:null
     };
     open = (options)=>{
-        const { component, callback } = options;
-        const _component = React.createElement(component, {close: this.close});
+        const { component } = options;
+        const _component = React.createElement(component,{close: this.close})
         this.setState({
             active: true,
-            component: _component,
-            callback: callback
+            component:_component
         })
     };
     close=data=>{
         this.setState({
             active: false
-        });
-        this.state.callback(data);
+        })
     };
     
     render(){
