@@ -31,7 +31,9 @@ class AddInventory extends React.Component{
                 </div>
                 <div className="field">
                     <div className="control">
-                        <label className="label">Status</label>
+                        <label className="label">
+                            Status
+                        </label>
                         <div className="select is-fullwidth">
                             <select name="status" id="">
                                 <option>available</option>
