@@ -1,5 +1,4 @@
 import React from 'react';
-import axio from 'commons/axios';
 
 class AddInventory extends React.Component{
     state={
@@ -21,9 +20,9 @@ class AddInventory extends React.Component{
     submit=e=>{
         e.preventDefault();
         const product={...this.state}
-        console.log(product);
+        console.log(product)
     }
- 
+
     render(){
         return(
             <div className="inventory">

@@ -1,5 +1,4 @@
 import React from 'react';
-import axio from 'commons/axios';
 
 class AddInventory extends React.Component{
     state={
@@ -18,17 +17,15 @@ class AddInventory extends React.Component{
         })
     }
 
-    submit=e=>{
-        e.preventDefault();
-        const product={...this.state}
-        console.log(product);
+    submit= e ={
+
     }
- 
+
     render(){
         return(
             <div className="inventory">
                 <p className="title has-text-centered">Add Product</p>
-                <form onSubmit={this.submit}>
+                <form onSubmit=t{this.submit}>
                     <div className="field">
                         <div className="control">
                             <label className="label">Name</label>

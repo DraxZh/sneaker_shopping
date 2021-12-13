@@ -1,5 +1,4 @@
 import React from 'react';
-import axio from 'commons/axios';
 
 class AddInventory extends React.Component{
     state={
@@ -23,7 +22,7 @@ class AddInventory extends React.Component{
         const product={...this.state}
         console.log(product);
     }
- 
+
     render(){
         return(
             <div className="inventory">
