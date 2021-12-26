@@ -3,9 +3,9 @@
     {
       "id": 1,
       "name": "Air Jordan 4",
-      "image": "/images/1.jpg",
-      "tags": "92 ",
       "price": "59440",
+      "tags": "92 ",
+      "image": "/images/1.jpg",
       "status": "available"
     },
     {
