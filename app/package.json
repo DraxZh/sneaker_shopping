@@ -20,7 +20,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "ustart":"serve -- single ./build",
+    "start":"serve -- single ./build",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
