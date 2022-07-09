@@ -22,7 +22,7 @@ class AddInventory extends React.Component{
     submit=event=>{
         event.preventDefault();
         const product={...this.state};
-        axios.post('http://localhost:3003/products', product).then(res=>{
+        axios.post('/products', product).then(res=>{
             this.props.close(res.data);
             toast.success('Add Success');
         })

@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Router from 'Router';
-import App from 'components/App';
+import App from 'pages/App';
 import 'css/app.scss';
 import 'css/style.scss';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'commons/auth';
 
 ReactDom.render(<div>
                     <ToastContainer
@@ -15,7 +16,7 @@ ReactDom.render(<div>
                         newestOnTop={false}
                         closeOnClick
                         rtl={false}
-                        pauseOnFocusLoss
+                        pauseOnVisibilityChange
                         draggable
                         pauseOnHover/>
                     <Router />

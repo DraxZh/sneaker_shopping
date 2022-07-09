@@ -1,9 +1,12 @@
 import React from 'react';
+import withRouter from 'components/withRouter'
+import {toast} from "react-toastify";
+
 
 class ToolBox extends React.Component{
 
     state = {
-        searchText:""
+        searchText:"",
     }
     //change the search bar into inputed value
     handleChange = event =>{
@@ -14,13 +17,23 @@ class ToolBox extends React.Component{
         this.props.search(value);
     };
 
-    //clear search
-    clearSearch = () =>{
+    //clear search text
+    clearSearchText = () =>{
         this.setState({
             searchText:''
         });
         this.props.search('')
-    }; 
+    };
+
+    goCart = () =>{
+        if(!global.auth.isLogin()){
+            this.props.history('/login')
+            toast.info('Please Login First');
+
+        }else{
+            this.props.history('/cart');
+        }
+    }
 
     render(){
         return (
@@ -37,17 +50,17 @@ class ToolBox extends React.Component{
                             onChange={this.handleChange}/>
                         </div>
                         <div className="control">
-                            <button className="button" onClick ={this.clearSearch}>X</button>
+                            <button className="button" onClick ={this.clearSearchText}>X</button>
                         </div>
                     </div>
                 </div>
-                <div className="cart-box">
+                <div to="/cart" className="cart-box" onClick={this.goCart}>
                     <i className="fas fa-shopping-cart"></i>
-                    <span className="cart-num">(0)</span>
+                    <span className="cart-num">({this.props.cartNum})</span>
                 </div>
             </div>
         );
     }
 }
 
-export default ToolBox;
+export default withRouter(ToolBox);

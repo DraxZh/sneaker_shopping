@@ -1,6 +1,5 @@
 import React from 'react';
 import {toast} from 'react-toastify'
-import axio from 'commons/axios';
 import axios from 'commons/axios';
 
 class EditInventory extends React.Component{
@@ -36,14 +35,14 @@ class EditInventory extends React.Component{
     submit=event=>{
         event.preventDefault();
         const product={...this.state};
-        axios.put(`http://localhost:3003/products/${this.state.id}`, product).then(res=>{
+        axios.put(`/products/${this.state.id}`, product).then(res=>{
             this.props.close(res.data);
             toast.success('Edit Success');
         })
     }
 
     onDelete=()=>{
-        axios.delete(`http://localhost:3003/products/${this.state.id}`).then(res => {
+        axios.delete(`/products/${this.state.id}`).then(res => {
             this.props.deleteProduct(this.state.id);
             this.props.close();
             toast.info('Delete Success');
