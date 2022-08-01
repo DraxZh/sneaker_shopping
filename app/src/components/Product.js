@@ -32,6 +32,7 @@ class Product extends React.Component{
             return;
         }
         try{
+            const user = global.auth.getUser() || {};
             const { id, name, image, price } = this.props.product;
             //获取某个id商品
             const res = axios.get(`/carts?productID=${id}`);
